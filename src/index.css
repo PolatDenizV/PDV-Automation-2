@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@layer base {
+  body {
+    @apply bg-purple-950;
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .typewriter-text {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .neon-text {
+    color: #000000;
+    opacity: 1;
+    text-shadow: none;
+  }
+
+  .neon-text.animate-neon {
+    animation: neon-glow 3s ease-in-out infinite;
+  }
+}
+
+@keyframes neon-glow {
+  0%, 100% {
+    text-shadow: 
+      0 0 7px #0ea5e9,
+      0 0 10px #0ea5e9,
+      0 0 21px #0ea5e9,
+      0 0 42px #0284c7,
+      0 0 82px #0284c7,
+      0 0 92px #0284c7,
+      0 0 102px #0284c7,
+      0 0 151px #0284c7;
+  }
+  50% {
+    text-shadow: 
+      0 0 4px #0ea5e9,
+      0 0 7px #0ea5e9,
+      0 0 14px #0ea5e9,
+      0 0 28px #0284c7,
+      0 0 54px #0284c7,
+      0 0 61px #0284c7,
+      0 0 68px #0284c7,
+      0 0 100px #0284c7;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-scale-in {
+  animation: scale-in 0.3s ease-out forwards;
+}
+
+.group:hover .group-hover\:animate-float {
+  animation: float 2s ease-in-out infinite;
+}
