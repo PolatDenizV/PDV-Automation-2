@@ -31,7 +31,7 @@ export default function HeroContent() {
         <div className="relative mb-4">
           <h1 ref={headlineRef} className="text-5xl md:text-7xl font-bold mb-4 leading-tight">
             <span className={`neon-text ${isVisible ? 'animate-neon' : ''}`}>
-              Inhuman Volume Made Cheaper Than Human Labor
+              Get The Power Of A Team for Less Than a Persons Salary
             </span>
           </h1>
 
